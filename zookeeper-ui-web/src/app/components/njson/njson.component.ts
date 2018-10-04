@@ -70,7 +70,7 @@ export class NjsonComponent implements OnInit {
                 
                   if (staticObj.name == 'static')
                   {
-                    //console.log('Murali -----------STATIC');
+                    console.log('Murali -----------STATIC');
 
                      exportData.children.forEach(function(staticObj1) {
                       staticObj1.children.forEach(function(serverObj1){ 
