@@ -51,7 +51,7 @@ export class NjsonComponent implements OnInit {
     this.currentNode = new Node(nodePath);
     this.currentNodeParents = this.currentNode.parents;
     this.reloadNodeChildren(this.currentNode);
-
+ 
 
     this._configApi.getNodeExport(this.currentNode.path).subscribe(
       exportData => {
