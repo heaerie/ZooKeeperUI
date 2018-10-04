@@ -60,7 +60,7 @@ export class NjsonComponent implements OnInit {
         this.jsonvalue =  exportData;
         var respJson = new Array();
         //this.respJson = new Array();
-        //console.log('this.jsonvalue',this.jsonvalue);
+        console.log('this.jsonvalue',this.jsonvalue);
         var BreakException = {};
 
         exportData.children.forEach(function(staticObj) {
