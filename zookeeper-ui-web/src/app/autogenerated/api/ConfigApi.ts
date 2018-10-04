@@ -28,7 +28,7 @@ import { Configuration }                                     from '../configurat
 @Injectable()
 export class ConfigApi {
 
-    protected basePath = 'http://localhost';
+    protected basePath = 'http://ip-172-31-88-118';
     public defaultHeaders: Headers = new Headers();
     public configuration: Configuration = new Configuration();
 
