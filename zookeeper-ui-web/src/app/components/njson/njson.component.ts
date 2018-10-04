@@ -64,9 +64,9 @@ export class NjsonComponent implements OnInit {
         var BreakException = {};
 
         exportData.children.forEach(function(staticObj) { console.log('staticObj.name', staticObj.name);
-          staticObj.children.forEach(function(serverObj){  console.log('staticObj.name', serverObj.name);
-            serverObj.children.forEach(function(clientNodObj) { console.log('staticObj.name', clientNodObj.name);
-                clientNodObj.children.forEach(function(applicationObj) { console.log('staticObj.name', applicationObj.name);
+          staticObj.children.forEach(function(serverObj){  console.log('serverObj.name', serverObj.name);
+            serverObj.children.forEach(function(clientNodObj) { console.log('clientNodObj.name', clientNodObj.name);
+                clientNodObj.children.forEach(function(applicationObj) { console.log('applicationObj.name', applicationObj.name);
                 
                   if (staticObj.name == 'static')
                   {
