@@ -2,7 +2,7 @@ FROM java:openjdk-8-jre-alpine
 
 MAINTAINER mediatech <devops@mediatechsolutions.es>
 
-EXPOSE 8080
+EXPOSE 5888
 
 ADD build/libs/zookeeper-rest-api.jar zookeeper-rest-api.jar
 RUN sh -c 'touch /zookeeper-rest-api.jar'

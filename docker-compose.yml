@@ -6,7 +6,7 @@ services:
         links:
             - zookeeper-ui-api
         ports:
-            - 8080:80
+            - 5888:80
         volumes:
             - ./zookeeper-ui-web/nginx/app_config.json:/usr/share/nginx/html/config.json
             
