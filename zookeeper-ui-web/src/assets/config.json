@@ -1,3 +1,3 @@
 {
-  "zooKeeperServiceBaseUrl": "http://localhost:5888"
+  "zooKeeperServiceBaseUrl": "http://localhost:8080"
 }
