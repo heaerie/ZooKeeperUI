@@ -63,10 +63,10 @@ export class NjsonComponent implements OnInit {
         console.log('this.jsonvalue',this.jsonvalue);
         var BreakException = {};
 
-        exportData.children.forEach(function(staticObj) {
-          staticObj.children.forEach(function(serverObj){ 
-            serverObj.children.forEach(function(clientNodObj) {
-                clientNodObj.children.forEach(function(applicationObj) {
+        exportData.children.forEach(function(staticObj) { console.log('staticObj.name', staticObj.name);
+          staticObj.children.forEach(function(serverObj){  console.log('staticObj.name', serverObj.name);
+            serverObj.children.forEach(function(clientNodObj) { console.log('staticObj.name', clientNodObj.name);
+                clientNodObj.children.forEach(function(applicationObj) { console.log('staticObj.name', applicationObj.name);
                 
                   if (staticObj.name == 'static')
                   {
