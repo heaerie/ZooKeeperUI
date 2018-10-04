@@ -68,7 +68,7 @@ export class NjsonComponent implements OnInit {
             serverObj.children.forEach(function(clientNodObj) {
                 clientNodObj.children.forEach(function(applicationObj) {
                 
-                  if (staticObj.name == 'Static')
+                  if (staticObj.name == 'static')
                   {
                     //console.log('Murali -----------STATIC');
 
@@ -76,7 +76,7 @@ export class NjsonComponent implements OnInit {
                       staticObj1.children.forEach(function(serverObj1){ 
                         serverObj1.children.forEach(function(clientNodObj1) {
                             clientNodObj1.children.forEach(function(applicationObj1) {
-                              if (staticObj1.name == 'Dynamic' && serverObj.name == serverObj1.name
+                              if (staticObj1.name == 'dynamic' && serverObj.name == serverObj1.name
                                   && clientNodObj.name == clientNodObj1.name
                                  ) 
                               {
