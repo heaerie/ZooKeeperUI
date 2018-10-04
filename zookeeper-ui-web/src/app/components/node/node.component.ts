@@ -113,6 +113,7 @@ export class NodeComponent implements OnInit {
     this._configApi.getNodeData(this.node.path)
       .subscribe(
         nodeData => {
+          console.log('nodeData', nodeData);
           this.node.value = nodeData.data;
           this.editedValue = nodeData.data;
           if (this.jsonEditor)

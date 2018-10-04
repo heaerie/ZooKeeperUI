@@ -1,0 +1,17 @@
+zookeeper:
+  connection_string: 127.0.0.1:2181
+
+jwt:
+  secret: YourJWTSecretPassword
+  timeout_seconds: 1800
+
+cors:
+  allowed_origins: '*'
+  allowed_headers: '*'
+  allowed_methods: '*'
+
+users:
+  users_details:
+    -
+      name: Admin
+      password: Admin

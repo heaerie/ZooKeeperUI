@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
 
   logUserIn() {
     this.loading = true;
+    console.log('username : ',this.username , 'password :',  this.password);
     this._loginService.logIn(this.username, this.password)
       .subscribe(
         (data) => {
@@ -33,8 +34,9 @@ export class LoginComponent implements OnInit {
         },
         (error) => {
           this.loading = false;
+          console.log('Murali : ', error.status);
           if (error.status === 401) {
-            this.authenticationError = 'Invalid user name and password combination.';
+            this.authenticationError = 'Invalid user name and password combination murali.';
           } else {
             this.alerts.addAlert(Alert.fromResponse(error));
           }

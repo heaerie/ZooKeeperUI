@@ -34,10 +34,13 @@ export class NodesPageComponent implements OnInit {
     this.loading = true;
     this.route.params.map(params => params['nodePath'])
       .subscribe((nodePath) => this.setCurrentNode(nodePath));
+      
   }
 
   setCurrentNode(nodePath: string): void {
+    console.log('nodePath',nodePath);
     this.currentNode = new Node(nodePath);
+    console.log('this.currentNode',this.currentNode);
     this.currentNodeParents = this.currentNode.parents;
     this.reloadNodeChildren(this.currentNode);
   }
@@ -78,6 +81,7 @@ export class NodesPageComponent implements OnInit {
       exportData => {
         var link = document.createElement("a");
         link.download = "zookeeper-export.json";
+        console.log('Murali',JSON.stringify(exportData));
         link.href = "data:application/json," + encodeURIComponent(JSON.stringify(exportData));
         link.click();
         this.alerts.addAlert({

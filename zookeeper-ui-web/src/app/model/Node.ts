@@ -24,6 +24,7 @@ export class Node {
     if (!result.endsWith(pathSeparator))
       result += pathSeparator;
     result += child;
+    //console.log('Murali result - Node.ts',result);
     return result;
   }
 
@@ -75,6 +76,7 @@ export class Node {
     for (let pathSegment of pathSegments) {
       if (!parentPath.endsWith(pathSeparator)) {
         parentPath += pathSeparator;
+        console.log('parentPath : ',parentPath);
       }
 
       parentPath += pathSegment;

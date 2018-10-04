@@ -38,6 +38,7 @@ export class LoginService {
         }, sessionInfo.expirationSeconds * 1000);
       },
       error => {
+        console.log('Murali ---', error.status);
         if (error.status === 401) {
           this.loggedIn = false;
         } else {

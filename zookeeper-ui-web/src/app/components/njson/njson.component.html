@@ -1,0 +1,45 @@
+
+<div class="row">
+    <ol class="breadcrumb">
+      <li ><strong>SRDC Application Agent</strong></li>
+    </ol>
+  </div>
+
+<br>
+
+<table class="table">
+ 
+  <thead>
+    <th scope="col">Node Name</th>
+    <th scope="col">Application Name</th>
+    <th scope="col">Wait Time Sec</th>
+    <th scope="col">Configured Queue Id</th>
+    <th scope="col">Queue Capacity</th>
+    <th scope="col">Running Queue</th>
+    <th scope="col">Running State</th>
+  </thead>
+
+
+
+  <tr *ngFor="let type of respJson">
+      <td>{{type.server }}</td>
+      <td>{{type.client }} </td>
+      <td>{{type.value.waitTime }}</td>
+      <td>{{type.value.QueueId }}</td>
+      <td>{{type.value.maxQueueSize }}</td>
+      <td>{{type.dynvalue.QueueId}}</td>
+      <td *ngIf="type.dynstatus == true" > <img src='../../../assets/img/running.gif' height="50px" width="50px"> </td>
+      <td *ngIf="type.dynstatus == false" > {{"&nbsp;&nbsp;&nbsp;"}}<img src='../../../assets/img/stopped1.png' height="22px" width="22px"> </td>
+
+    </tr>
+
+</table>
+
+<br>
+<br>
+<br><br><br><br><br>
+
+<div *ngIf="interface"> <img src='../../../assets/img/running.gif' height="0px" width="0px"></div> 
+
+<app-alerts [alerts]="alerts"></app-alerts>
+

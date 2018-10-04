@@ -1,0 +1,49 @@
+<app-alerts [alerts]="alerts"></app-alerts>
+
+<a class="btn btn-primary btn-xs node-name-selector" type="button" routerLink="/nodes/{{node.path}}">
+  {{node.name}} <span class="badge children-badge">{{node.children.length}} <img class="children-icon" src="../../../assets/img/children.svg" alt="children"></span>
+</a>
+
+<div class="btn-group">
+  <button class="btn btn-success btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{node.type}} <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li *ngFor="let type of nodeDataTypes"><a class="{{type}}-selector" (click)="setDataType(type)">{{type}}</a></li>
+  </ul>
+</div>
+
+<div class="form-group row">
+  <div (mousedown)="editing = true" class="col-xs-12 col-sm-11 inputs-container-selector">
+    <input *ngIf="node.type === NodeDataType.String" id="valueInput" type="text" class="form-control node-value-selector" name="_editedValue" (keyup)="onValueEdited($event)"
+        [(ngModel)]="_editedValue">
+    <input *ngIf="node.type === NodeDataType.Number" id="valueInput" type="number" class="form-control node-value-selector" name="_editedValue" (keyup)="onValueEdited($event)"
+        [(ngModel)]="_editedValue">
+    <div #jsoneditor [ngClass]="{'hidden': node.type !== NodeDataType.Json, 'jsoneditor': true}"></div>
+  </div>
+  <div class="col-xs-12 col-sm-1">
+    <div class="btn-group pull-right" role="group" aria-label="...">
+      <button type="button" class="btn btn-danger" (click)="openDeletionModal(deleteNodeModal)"><span class="glyphicon glyphicon-remove"></span></button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <button type="button"
+        class="btn btn-primary save-edition-selector"
+        (click)="setNodeData()"
+        [ngClass]="{hidden: !editing}">Save</button>
+    <button type="button"
+        class="btn btn-danger cancel-edition-selector"
+        (click)="cancelEdition()"
+        [ngClass]="{hidden: !editing}">Cancel</button>
+  </div>
+</div>
+
+<ng-template #deleteNodeModal>
+  <div class="modal-body text-center">
+    <p>Are you sure you want to delete the specified node?</p>
+    <button type="button" class="btn btn-default" (click)="confirmDeletion()" >Yes</button>
+    <button type="button" class="btn btn-primary" (click)="this.modalRef.hide()" >No</button>
+  </div>
+</ng-template>

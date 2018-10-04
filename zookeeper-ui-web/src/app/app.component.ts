@@ -9,7 +9,7 @@ import { AlertList, Alert, AlertType} from './components/alerts/alerts.component
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'ZooKeeperUI';
+  title = 'SWIFT Scalable Resilient Distributed Custodian';
   isLoggedIn: boolean;
   alerts: AlertList;
 

@@ -10,7 +10,7 @@
                   <input [(ngModel)]="password" name="username" type="password" class="form-control" placeholder="Password" required #passwordInput="ngModel">
 
                   <div *ngIf="authenticationError" class="alert alert-danger">
-                      Invalid user name and password combination.
+                      Invalid user name and password combination Sree.
                   </div>
 
                   <button *ngIf="!loading" class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="usernameInput.invalid || passwordInput.invalid">

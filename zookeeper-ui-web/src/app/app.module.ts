@@ -26,6 +26,8 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
 import { HttpInterceptor } from './services/http-interceptor.service';
 import { Router } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NjsonComponent } from './components/njson/njson.component';
+import { NjsonSingleComponent } from './components/njson-single/njson-single.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AlertsComponent,
     LoginComponent,
     LoadingSpinnerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NjsonComponent,
+    NjsonSingleComponent 
   ],
   entryComponents: [NodeCreationModalComponent, FileUploadModalComponent],
   imports: [
