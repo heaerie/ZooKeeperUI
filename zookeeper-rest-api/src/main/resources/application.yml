@@ -1,5 +1,5 @@
 zookeeper:
-  connection_string: 127.0.0.1:2181
+  connection_string: 18.235.45.11:2181
 
 jwt:
   secret: YourJWTSecretPassword
