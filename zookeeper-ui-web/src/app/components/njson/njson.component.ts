@@ -76,26 +76,35 @@ export class NjsonComponent implements OnInit {
                      exportData.children.forEach(function(staticObj1) {
                       staticObj1.children.forEach(function(serverObj1){ 
                         serverObj1.children.forEach(function(clientNodObj1) {
-                           // clientNodObj1.children.forEach(function(applicationObj1) {
                               if (staticObj1.name == 'dynamic' && serverObj.name == serverObj1.name
                                   && clientNodObj.name == clientNodObj1.name
                                  ) 
                               {
-                                console.log('Matched staticObj.name : ',staticObj.name,' serverObj.name :',serverObj.name,' clientNodObj.name', clientNodObj.name, ' clientNodObj.value', clientNodObj.value );
-                                respJson.push  ({ 
-                                  "type" : staticObj.name,
-                                  "server" : serverObj.name,
-                                  "client" : clientNodObj.name,
-                                  "application" : clientNodObj.name ,
-                                  "value" : JSON.parse(clientNodObj.value),
-                                  //"dynvalue" : JSON.parse(clientNodObj1.value),
-                                  "dynvalue" : JSON.parse(JSON.stringify(clientNodObj1.value) ),
-                                  "dynstatus" : true
-                                 });
-                                 //this.found_flg = true;
-                                 //throw BreakException;
+                                exportData.children.forEach(function(staticObj2) {
+                                  staticObj2.children.forEach(function(serverObj2){ 
+                                    serverObj2.children.forEach(function(clientNodObj2) {
+                                    
+                                    if (staticObj2.name == 'data' && serverObj.name == serverObj2.name
+                                        && clientNodObj.name == clientNodObj2.name)
+                                    { 
+                                        console.log('Matched staticObj.name : ',staticObj.name,' serverObj.name :',serverObj.name,' clientNodObj.name', clientNodObj.name, ' clientNodObj.value', clientNodObj.value );
+                                        respJson.push  ({ 
+                                          "type" : staticObj.name,
+                                          "server" : serverObj.name,
+                                          "client" : clientNodObj.name,
+                                          "application" : clientNodObj.name ,
+                                          "value" : JSON.parse(clientNodObj.value),
+                                          //"dynvalue" : JSON.parse(clientNodObj1.value),
+                                          "dynvalue" : JSON.parse(JSON.stringify(clientNodObj2.value) ),
+                                          "dynstatus" : true
+                                        });
+                                      }
+                                    })
+                                  })
+                                });
+
+
                               }
-                            //})
                           })
                         })
                       });    
