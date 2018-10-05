@@ -24,10 +24,10 @@
   <tr *ngFor="let type of respJson">
       <td>{{type.server }}</td>
       <td>{{type.client }} </td>
-      <td>{{type.value.waitTime }}</td>
-      <td>{{type.value.QueueId }}</td>
-      <td>{{type.value.maxQueueSize }}</td>
-      <td>{{type.dynvalue.QueueId}}</td>
+      <td>{{type.value.wait_time }}</td>
+      <td>{{type.value.queue_ids }}</td>
+      <td>{{type.value.max_queue_size }}</td>
+      <td>{{type.dynvalue.queue_ids}}</td>
       <td *ngIf="type.dynstatus == true" > <img src='../../../assets/img/running.gif' height="50px" width="50px"> </td>
       <td *ngIf="type.dynstatus == false" > {{"&nbsp;&nbsp;&nbsp;"}}<img src='../../../assets/img/stopped1.png' height="22px" width="22px"> </td>
 

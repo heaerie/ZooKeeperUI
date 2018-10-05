@@ -66,7 +66,7 @@ export class NjsonComponent implements OnInit {
         exportData.children.forEach(function(staticObj) { console.log('staticObj.name', staticObj.name);
           staticObj.children.forEach(function(serverObj){  console.log('serverObj.name', serverObj.name);
             serverObj.children.forEach(function(clientNodObj) { console.log('clientNodObj.name', clientNodObj.name);
-                clientNodObj.children.forEach(function(applicationObj) { console.log('applicationObj.name', applicationObj.name);
+               // clientNodObj.children.forEach(function(applicationObj) { console.log('applicationObj.name', applicationObj.name);
                 
                   if (staticObj.name == 'static')
                   {
@@ -75,7 +75,7 @@ export class NjsonComponent implements OnInit {
                      exportData.children.forEach(function(staticObj1) {
                       staticObj1.children.forEach(function(serverObj1){ 
                         serverObj1.children.forEach(function(clientNodObj1) {
-                            clientNodObj1.children.forEach(function(applicationObj1) {
+                           // clientNodObj1.children.forEach(function(applicationObj1) {
                               if (staticObj1.name == 'dynamic' && serverObj.name == serverObj1.name
                                   && clientNodObj.name == clientNodObj1.name
                                  ) 
@@ -85,15 +85,15 @@ export class NjsonComponent implements OnInit {
                                   "type" : staticObj.name,
                                   "server" : serverObj.name,
                                   "client" : clientNodObj.name,
-                                  "application" : applicationObj.name ,
-                                  "value" : JSON.parse(applicationObj.value),
-                                  "dynvalue" : JSON.parse(applicationObj1.value),
+                                  "application" : clientNodObj.name ,
+                                  "value" : JSON.parse(clientNodObj.value),
+                                  "dynvalue" : JSON.parse(clientNodObj1.value),
                                   "dynstatus" : true
                                  });
                                  //this.found_flg = true;
                                  //throw BreakException;
                               }
-                            })
+                            //})
                           })
                         })
                       });    
@@ -117,16 +117,16 @@ export class NjsonComponent implements OnInit {
                         console.log('test',test.waitTime); 
                         */
 
-                        var ss = applicationObj.value;
+                       // var ss = applicationObj.value;
                        // var myJSON = JSON.stringify(ss,['waitTime','QueueId','maxQueueSize']);
                        // console.log('myJSON',myJSON);
-                        var test  = JSON.parse(ss);
+                      //  var test  = JSON.parse(ss);
                         //console.log('test',test); 
   
                     
 
                     
-                })
+               // })
 
             }) 
 
@@ -138,9 +138,9 @@ export class NjsonComponent implements OnInit {
         exportData.children.forEach(function(staticObj) {
           staticObj.children.forEach(function(serverObj){ 
             serverObj.children.forEach(function(clientNodObj) {
-                clientNodObj.children.forEach(function(applicationObj) {
+              //  clientNodObj.children.forEach(function(applicationObj) {
                   let bool1 = 'false';
-                  if( staticObj.name=='Static')
+                  if( staticObj.name=='static')
                     {
 
                                   respJson.forEach(function (arrayItem) {
@@ -165,15 +165,15 @@ export class NjsonComponent implements OnInit {
                                   "type" : staticObj.name,
                                   "server" : serverObj.name,
                                   "client" : clientNodObj.name,
-                                  "application" : applicationObj.name ,
-                                  "value" : JSON.parse(applicationObj.value),
+                                  "application" : clientNodObj.name ,
+                                  "value" : JSON.parse(clientNodObj.value),
                                   "dynvalue" : '',
                                   "dynstatus" : false
                                 });
                               }
                           }
 
-                    })
+                  //  })
                            
                     })
                   })
