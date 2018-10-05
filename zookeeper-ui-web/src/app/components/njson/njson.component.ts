@@ -80,7 +80,7 @@ export class NjsonComponent implements OnInit {
                                   && clientNodObj.name == clientNodObj1.name
                                  ) 
                               {
-                              //  console.log('Matched serverObj.name : ',serverObj.name,' clientNodObj.name :',clientNodObj.name );
+                                console.log('Matched staticObj.name : ',staticObj.name,' serverObj.name :',serverObj.name,' clientNodObj.name', clientNodObj.name, ' clientNodObj.value', clientNodObj.value );
                                 respJson.push  ({ 
                                   "type" : staticObj.name,
                                   "server" : serverObj.name,
