@@ -87,7 +87,8 @@ export class NjsonComponent implements OnInit {
                                   "client" : clientNodObj.name,
                                   "application" : clientNodObj.name ,
                                   "value" : JSON.parse(clientNodObj.value),
-                                  "dynvalue" : JSON.parse(clientNodObj1.value),
+                                  //"dynvalue" : JSON.parse(clientNodObj1.value),
+                                  "dynvalue" : JSON.parse(clientNodObj1.value != null ? clientNodObj1.value :"" ),
                                   "dynstatus" : true
                                  });
                                  //this.found_flg = true;
