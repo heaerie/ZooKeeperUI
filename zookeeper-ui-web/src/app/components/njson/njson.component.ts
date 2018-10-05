@@ -88,6 +88,7 @@ export class NjsonComponent implements OnInit {
                                         && clientNodObj.name == clientNodObj2.name)
                                     { 
                                         console.log('Matched staticObj.name : ',staticObj2.name,' serverObj.name :',serverObj2.name,' clientNodObj.name', clientNodObj2.name, ' clientNodObj.value', clientNodObj2.value );
+                                        console.log('JSON.parse(JSON.stringify(clientNodObj2.value) )',JSON.parse(JSON.stringify(clientNodObj2.value) ));
                                         respJson.push  ({ 
                                           "type" : staticObj.name,
                                           "server" : serverObj.name,
@@ -157,12 +158,12 @@ export class NjsonComponent implements OnInit {
                                   respJson.forEach(function (arrayItem) {
                                   var x = arrayItem.server;
                                   // console.log('value of x is ',x);
-                                  console.log('arrayItem.server',arrayItem.server,'serverObj.name',serverObj.name,'arrayItem.client',arrayItem.client,'clientNodObj.name',clientNodObj.name);
+                                  //console.log('arrayItem.server',arrayItem.server,'serverObj.name',serverObj.name,'arrayItem.client',arrayItem.client,'clientNodObj.name',clientNodObj.name);
                                   if ( arrayItem.server == serverObj.name && arrayItem.client ==  clientNodObj.name)
                                   {
                                     bool1 = 'true';
 
-                                    console.log('Already added Server',serverObj.name  );
+                                    //console.log('Already added Server',serverObj.name  );
                                   }
                             
                                 }
