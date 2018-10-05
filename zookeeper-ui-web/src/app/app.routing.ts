@@ -6,7 +6,7 @@ import { NjsonComponent } from './components/njson/njson.component';
 
 const appRoutes: Routes = [
   { path: 'nodes/:nodePath', component: NodesPageComponent },
-  { path: '', pathMatch: 'full', redirectTo: '/nodes/~~' },
+  { path: '', pathMatch: 'full', redirectTo: '/njson' },
   { path: 'login', component: LoginComponent },
   { path: 'not_found', component: NotFoundComponent },
   { path: 'njson', component: NjsonComponent }

@@ -36,6 +36,7 @@ export class NjsonComponent implements OnInit {
               private route: ActivatedRoute) {
     this.alerts = new AlertList();
     this.currentNodeParents = [];
+    
   }
 
   ngOnInit() {
