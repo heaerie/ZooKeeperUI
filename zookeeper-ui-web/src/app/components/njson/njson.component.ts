@@ -97,7 +97,7 @@ export class NjsonComponent implements OnInit {
                                           "application" : clientNodObj.name ,
                                           "value" : JSON.parse(clientNodObj.value),
                                           //"dynvalue" : JSON.parse(clientNodObj1.value),
-                                          "dynvalue" : JSON.parse(JSON.stringify(clientNodObj2.value) ),
+                                          "dynvalue" : JSON.parse(clientNodObj2.value),
                                           "dynstatus" : true
                                         });
                                       }
