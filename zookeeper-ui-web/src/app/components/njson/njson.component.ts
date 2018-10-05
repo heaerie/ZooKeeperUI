@@ -89,6 +89,7 @@ export class NjsonComponent implements OnInit {
                                     { 
                                         console.log('Matched staticObj.name : ',staticObj2.name,' serverObj.name :',serverObj2.name,' clientNodObj.name', clientNodObj2.name, ' clientNodObj.value', clientNodObj2.value );
                                         console.log('JSON.parse(JSON.stringify(clientNodObj2.value) )',JSON.parse(JSON.stringify(clientNodObj2.value) ));
+                                        console.log('Queue id : ',(JSON.parse(JSON.stringify(clientNodObj2.value)).queue_ids ));
                                         respJson.push  ({ 
                                           "type" : staticObj.name,
                                           "server" : serverObj.name,
