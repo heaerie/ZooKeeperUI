@@ -8,12 +8,8 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">{{title}}</a>
-      <form *ngIf="isLoggedIn" class="navbar-form navbar-left">
-          <button type="button" class="btn btn-primary" >SWIFT Scalable Resilient Distributed Custodian</button>
-        </form>
-  </div>
+    </div>
     <div id="navbar" class="navbar-collapse collapse">
-
       <form *ngIf="isLoggedIn" class="navbar-form navbar-right">
         <button type="button" class="btn btn-default logout-button-selector" (click)="logOut()">Log out</button>
       </form>
@@ -28,6 +24,6 @@
 
 <footer class="footer text-center">
   <div class="container">
-    <p>@SWIFT  - SRDC GUI </p>
+    <p>SWIFT  - SRDC GUI</p>
   </div>
 </footer>
